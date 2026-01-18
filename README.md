@@ -38,17 +38,14 @@ Dette vil:
 
 Når tjenestene kjører, kan du teste hovedfunksjonaliteten via Swagger UI:
 
-* URL: http://localhost:8002/docs
-* Endepunkt: GET /tilgjengelige-konsulenter/sammendrag
+### 1. Se alle konsulenter (Rådata)
+* URL: http://localhost:8001/konsulenter
+Dette viser listen over konsulenter med navn, ferdigheter og belastning.
 
-### Parametre du kan teste med:
+### 2. Hent filtrert sammendrag via AI
+* URL: http://localhost:8002/hent-tilgjengelige-konsulenter
+* Metode: GET
+
+Bruk følgende parametre for å filtrere:
 * min_tilgjengelighet_prosent: f.eks. 50
 * påkrevd_ferdighet: f.eks. python
-
-Systemet beregner tilgjengelighet (100 minus belastning) og finner de konsulentene som matcher dine krav før de oppsummeres av AI-modellen.
-
-## Teknisk Stabel
-* Backend: FastAPI
-* HTTP Klient: Httpx (asynkron)
-* Containerisering: Docker & Docker Compose
-* LLM: GPT-4o-mini via OpenRouter
