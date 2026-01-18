@@ -43,7 +43,7 @@ Når tjenestene kjører, kan du teste hovedfunksjonaliteten via Swagger UI:
 Dette viser listen over konsulenter med navn, ferdigheter og belastning.
 
 ### 2. Hent filtrert sammendrag via AI
-* URL: http://localhost:8002/hent-tilgjengelige-konsulenter
+* URL: URL: http://localhost:8002/docs
 * Metode: GET
 
 Bruk følgende parametre for å filtrere:
