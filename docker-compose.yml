@@ -1,0 +1,16 @@
+services:
+  konsulent-api:
+    build: ./konsulent-api
+    container_name: konsulent-api
+    ports:
+      - "8001:8000"
+
+  llm-verktoy-api:
+    build: ./llm-verktoy-api
+    container_name: llm-verktoy-api
+    ports:
+      - "8002:8000"
+    environment:
+      - OPENROUTER_API_KEY=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
+    depends_on:
+      - konsulent-api
